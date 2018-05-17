@@ -266,7 +266,7 @@ div.tocify {
 </div>
 <ol start="5" style="list-style-type: decimal">
 <li><p>Click <strong>GO</strong>. After a few seconds, the server displays a table with links to the input and output files. This includes contains the fasta-formatted sequences of the peaks.</p>
-<p><em>Optionally</em>, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p></li>
+<p><em>Optionally</em>, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps. The URL option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis. However you should beware that the result files will be removed from the server after 72 hours.</p></li>
 </ol>
 <div class="figure">
 <img src="figures/Figure2b_retrieve-seq-bed_result.png" title="Figure2b" alt="Figure2: Result page of sequences from bed/gff/vcf." />
@@ -277,33 +277,41 @@ div.tocify {
 <p><strong>Note:</strong> alternatively, a <strong>peak-motifs</strong>form can also be obtained by clicking on the tool name in the left-sided pannel. The difference is that this will open a fresh form, without transferring the content of the current query. You will thus have to fill up the sequence option manually.</p></li>
 </ol>
 </div>
-<div id="discovering-over-represented-motifs-in-the-set-of-peak-sequences" class="section level3">
-<h3>Discovering over-represented motifs in the set of peak sequences</h3>
+<div id="discovering-motifs-in-the-set-of-peak-sequences" class="section level3">
+<h3>Discovering motifs in the set of peak sequences</h3>
 <p>If you ran the last step of the previous section, you should already have a <strong>peak-motif</strong> form pre-filled with the URL of your fasta sequences. If this is the case, you can skip the two first steps, which are useful if you dispose of your own fasta file to analyse.</p>
 <ol style="list-style-type: decimal">
 <li><p>In the left-sided menu, find the tool <strong>peak-motifs</strong>.</p></li>
 <li><p>For the <strong>Peak sequences</strong> option set, paste the URL of the fasta sequence file obtained in the previous section (alternatively, you can upload the fasta file from your local copy but this will take more time.</p></li>
 <li><p>Type an appropriate <strong>tittle</strong> for the analysis, for example: <em>A. Thaliana MYB3R3 vs GFP - GSM1482283</em>.</p></li>
 <li><p>Explore the other options! We will discuss them during the training session.</p></li>
-<li><p>Specify a transcription factor database that will be used to associate the discovered motifs putative bound factors. For this dataset we will select <strong>footprintDB-plants</strong>. Note that the tool also allows you to upload a custom motif collection in Transfac format.</p></li>
+<li><p>Specify a transcription factor database that will be used to associate the discovered motifs putative bound factors. For this dataset we will select <strong>footprintDB-plants</strong>.</p>
+<p>Note that the tool also allows you to upload a custom motif collection in Transfac format.</p></li>
 </ol>
+<div class="figure">
+<img src="figures/peak-motifs_database_choice.png" alt="Choice of a motif database in peak-motifs form." />
+<p class="caption">Choice of a motif database in <strong>peak-motifs</strong> form.</p>
+</div>
 <p>6.Under <strong>Locate motifs and export predicted sites as custom UCSC tracks</strong>, in <strong>Visualiza peaks ans sites in genome browser</strong>, select peak coordiantes specified in fasta headers in <em>bedtools getfasta</em> format, asumming we used the <em>sequences from bed/gff/vcf</em> to retrieve the sequences.</p>
 <div class="figure">
 <img src="figures/Figure3.png" title="Figure3" alt="Figure3: Screenshot of the peak-motifs form. The user has to input the required data and information." />
 <p class="caption">Figure3: Screenshot of the <em>peak-motifs</em> form. The user has to input the required data and information.</p>
 </div>
-<p>7.A link to the results will appear. Anticipated results can be found <a href="./peak-motifs.2018-05-11.190016_2018-05-11.190016_zkwbfV/peak-motifs_synthesis.html">here</a>.</p>
-<ol start="8" style="list-style-type: decimal">
-<li><p><em>peak-motifs</em> results include:</p></li>
+<ol start="7" style="list-style-type: decimal">
+<li><p>A link to the results will appear. Anticipated results can be found <a href="./peak-motifs.2018-05-11.190016_2018-05-11.190016_zkwbfV/peak-motifs_synthesis.html">here</a>.</p></li>
+<li><p><em>peak-motifs</em> results include:</p>
+<ol style="list-style-type: lower-alpha">
 <li><p><strong>Results summary</strong>: The set of discovered motifs and the full results can be downloaded.</p></li>
 <li><p><strong>Sequence composition</strong>: Shows the nucleotidic composition of the peaks. Is possible to observed the size distribution of the peaks (mean of 200bps). Two transition tables are show, one for mono-nculeotide compistion and a second one for di-nucleotide compostion.</p></li>
 <li><p><strong>Discovered motifs by algorithm</strong>: The discovered motifs are organized by algorithm, and the motif name is built with the options used to retreive the motifs (k-mer length, markov model, rank of the motif). The motif logo is shown in both orientation and a motif comparison with the selected database is shown.</p></li>
+</ol></li>
 <li><p>Note that the algorithms display similar motifs, hence the next step would be to reduce motif redundancy.</p></li>
 </ol>
+<hr />
 </div>
 <div id="clustering-motifs" class="section level3">
 <h3>Clustering motifs</h3>
-<p>RSAT provides the tool <em>matrix-clustering</em> to reduce redundancy in a motif collection. This splecially usefull when several motif-discovery algorithms have been used on a data set, and several highly similar motifs have been found, like is the case in the current protocol.</p>
+<p>We will now use the tool <em>matrix-clustering</em> <span class="citation">(Castro-Mondragon et al. <a href="#ref-pmid28591841">2017</a>)</span>, which enables to reduce redundancy in a motif collection. This splecially usefull when several motif-discovery algorithms have been used on a data set, and several highly similar motifs have been found, like is the case in the current protocol.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open the tool <em>matrix-clustering</em> in the <a href="http://plants.rsat.eu">RSAT:Plant</a> server. <img src="figures/Figure4.1.png" title="Figure4.1" alt="Figure4.1: Screenshot of the matrix-clustering form. The user has to fill the mandatory sections." /></p></li>
 <li><p>On the title box give a title to the analysis.</p></li>
@@ -326,12 +334,12 @@ div.tocify {
 </ol>
 </div>
 </div>
-<div id="references" class="section level2">
+<div id="references" class="section level2 unnumbered">
 <h2>References</h2>
-<ol style="list-style-type: decimal">
-<li>Castro-Mondragon, J.A. et al. (2016). Methods Mol Biol., 1482, 297–322</li>
-</ol>
 <div id="refs" class="references">
+<div id="ref-pmid28591841">
+<p>Castro-Mondragon, J. A., S. Jaeger, D. Thieffry, M. Thomas-Chollier, and J. van Helden. 2017. “RSAT matrix-clustering: dynamic exploration and redundancy reduction of transcription factor binding motif collections.” <em>Nucleic Acids Res.</em> 45 (13): e119.</p>
+</div>
 <div id="ref-pmid9719638">
 <p>Helden, J. van, B. Andre, and J. Collado-Vides. 1998. “Extracting regulatory sites from the upstream region of yeast genes by computational analysis of oligonucleotide frequencies.” <em>J. Mol. Biol.</em> 281 (5): 827–42.</p>
 </div>
@@ -351,12 +359,6 @@ div.tocify {
 <p>Thomas-Chollier, M., O. Sand, J. V. Turatsinze, R. Janky, M. Defrance, E. Vervisch, S. Brohee, and J. van Helden. 2008. “RSAT: regulatory sequence analysis tools.” <em>Nucleic Acids Res.</em> 36 (Web Server issue): W119–127.</p>
 </div>
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>The second option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis<a href="#fnref1">↩</a></p></li>
-</ol>
 </div>
 
 

@@ -139,7 +139,7 @@ For the current tutorial we will be using, preferentially, the [**RSAT::Plants**
 
 5. Click **GO**. After a few seconds, the server displays a table with links to the input and output files. This includes contains the fasta-formatted sequences of the peaks.  
 
-    *Optionally*, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps^[The second option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis].
+    *Optionally*, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps. The URL option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis. However you should beware that the result files will be removed from the server after 72 hours. 
 
 ![Figure2: Result page of  *sequences from bed/gff/vcf*.](figures/Figure2b_retrieve-seq-bed_result.png "Figure2b")
 
@@ -147,7 +147,7 @@ For the current tutorial we will be using, preferentially, the [**RSAT::Plants**
 
     **Note:** alternatively, a **peak-motifs**form can also be obtained by clicking on the tool name in the left-sided pannel. The difference is that this will open a fresh form, without transferring the content of the current query. You will thus have to fill up the sequence option manually.
 
-### Discovering over-represented motifs in the set of peak sequences
+### Discovering motifs in the set of peak sequences
 
 If you ran the last step of the previous section, you should already have a **peak-motif** form pre-filled with the URL of your fasta sequences. If this is the case, you can skip the two first steps, which are useful if you dispose of your own fasta file to analyse. 
 
@@ -172,22 +172,26 @@ If you ran the last step of the previous section, you should already have a **pe
 
 ![Figure3: Screenshot of the  *peak-motifs* form. The user has to input the required data and information.](figures/Figure3.png "Figure3")
 
-7.A link to the results will appear. Anticipated results can be found [here](./peak-motifs.2018-05-11.190016_2018-05-11.190016_zkwbfV/peak-motifs_synthesis.html).
+7. A link to the results will appear. Anticipated results can be found [here](./peak-motifs.2018-05-11.190016_2018-05-11.190016_zkwbfV/peak-motifs_synthesis.html).
 
 8. *peak-motifs* results include:
 
-  1. **Results summary**: The set of discovered motifs and the full results can be downloaded.
-
-  2. **Sequence composition**: Shows the nucleotidic composition of the peaks.
-    Is possible to observed the size distribution of the peaks (mean of 200bps). Two transition tables are show, one for mono-nculeotide compistion and a second one for di-nucleotide compostion. 
-    
-  3. **Discovered motifs by algorithm**:  The discovered motifs are organized by algorithm, and the motif name is built with the options used to retreive the motifs (k-mer length, markov model, rank of the motif). The motif logo is shown in both orientation and a motif comparison with the selected database is shown.
+    a. **Results summary**: The set of discovered motifs and the full results can be downloaded.
   
+    b. **Sequence composition**: Shows the nucleotidic composition of the peaks.
+      Is possible to observed the size distribution of the peaks (mean of 200bps). Two transition tables are show, one for mono-nculeotide compistion and a second one for di-nucleotide compostion. 
+      
+    c. **Discovered motifs by algorithm**:  The discovered motifs are organized by algorithm, and the motif name is built with the options used to retreive the motifs (k-mer length, markov model, rank of the motif). The motif logo is shown in both orientation and a motif comparison with the selected database is shown.
+    
 9. Note that the algorithms display similar motifs, hence the next step would be to reduce motif redundancy. 
+
+
+
+****************************************************************
 
 ### Clustering motifs
 
-RSAT provides the tool *matrix-clustering* to reduce redundancy in a motif collection. This splecially usefull when several motif-discovery algorithms have been used on a data set, and several highly similar motifs have been found, like is the case in the current protocol.
+We will now use the tool *matrix-clustering* [@pmid28591841], which enables to reduce redundancy in a motif collection. This splecially usefull when several motif-discovery algorithms have been used on a data set, and several highly similar motifs have been found, like is the case in the current protocol.
 
 1. Open the tool *matrix-clustering* in the [RSAT:Plant](http://plants.rsat.eu) server.
 ![Figure4.1: Screenshot of the  *matrix-clustering* form. The user has to fill the mandatory sections.](figures/Figure4.1.png "Figure4.1")
@@ -221,4 +225,3 @@ RSAT provides the tool *matrix-clustering* to reduce redundancy in a motif colle
 
 ## References
 
-1. Castro-Mondragon, J.A. et al. (2016). Methods Mol Biol., 1482, 297–322
