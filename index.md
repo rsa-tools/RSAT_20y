@@ -1,5 +1,11 @@
 ## RSAT 20th anniversary workshop
 
+In 2018, the Regulatory Sequence Analysis Tools ([RSAT](http://rsat.eu)) software suite celebrates its $20^{th}$ birthday by organising a 1-day workshop in Paris (May 17-18, 2018). 
+
+This Web site presents a 3-hours tutorial to get familiar with RSAT based on a study case where we analyse motifs in plant ChIP-seq peaks. This tutorial is derived from a previously published protocol [@pmid27557775]. The concepts seen here apply to other organisms as well. 
+
+The training session will include be customized based on a discussion with participants about their specific questions and needs. 
+
 
 ### Organisers
 
