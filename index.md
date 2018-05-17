@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+## RSAT 20th anniversary workshop
 
-You can use the [editor on GitHub](https://github.com/rsa-tools/RSAT_20y/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Organisers
 
-### Markdown
+1. Morgane Thomas-Chollier
+2. Alejandra Medina-Rivera
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Resources
 
-```markdown
-Syntax highlighted code block
+| Resource | Description + URL |
+|----------|----------------------------------------|
+| RSAT_20y | Support material for RSAT 20th anniversary workshop: <http://rsa-tools.github.io/RSAT_20y/> |
+| RSAT | Regulatory Sequence Analysis Tools portal: <http://rsat.eu/> |
 
-# Header 1
-## Header 2
-### Header 3
+## Tutorials
 
-- Bulleted
-- List
+- **Peak-motifs**: analysis of motifs in ChIP-seq peaks with plant study case [html](tutorials/peak-motifs_tutorial.html)  [source Rmd](tutorials/peak-motifs_tutorial.Rmd) 
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rsa-tools/RSAT_20y/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
