@@ -129,25 +129,34 @@ For the current tutorial we will be using, preferentially, the [**RSAT::Plants**
 
 3. To specify the **genomic coordinates** you can either **upload** a file from your computer (e.g. the file that you downloaded in the previous section), or directly paste the link (e.g. ftp site above) in the **URL** textbox. 
 
-4. Set the **Output** opton to *server*. 
+4. Set the **Output** option to *server*. 
 
     *Optionally*, you can select email output in order to be notified of the query submission and completion (you shoud thus receive 2 separate emails for aach query). 
 
 
-5. After a few seconds, the server displays a table with links to the input and output files. This includes contains the fasta-formatted sequences of the peaks.  
-
-    *Optionally*, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps^[The second option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis].
-
 ![Figure2: Screenshot of the  *sequences from bed/gff/vcf* form. Note that the second **DEMO** will authomatically fill in the data of this tutorial](figures/Figure2_retrieve-seq-bed_form.png "Figure2")
 
 
+5. Click **GO**. After a few seconds, the server displays a table with links to the input and output files. This includes contains the fasta-formatted sequences of the peaks.  
+
+    *Optionally*, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps^[The second option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis].
+
+![Figure2: Result page of  *sequences from bed/gff/vcf*.](figures/Figure2b_retrieve-seq-bed_result.png "Figure2b")
+
+6. At the bottom of the result form, the **Next step** box enables you to automatically submit the result (fasta sequences of your peaks) to a diversity of RSAT tools. Click on the **peak-motifs** button. This will open a new form where the URL of the fasta sequences has been automatically pasted. 
+
+    **Note:** alternatively, a **peak-motifs**form can also be obtained by clicking on the tool name in the left-sided pannel. The difference is that this will open a fresh form, without transferring the content of the current query. You will thus have to fill up the sequence option manually.
+
 ### Discovering over-represented motifs in the set of peak sequences
 
-1.In any [RSAT server](http://plants.rsat.eu/) server, find the tool *peak-motifs*.
+If you ran the last step of the previous section, you should already have a **peak-motif** form pre-filled with the URL of your fasta sequences. If this is the case, you can skip the two first steps, which are useful if you dispose of your own fasta file to analyse. 
 
-2. Type an appropriate **tittle** for the analysis, for example: *A. Thaliana MYB3R3 vs GFP - GSM1482283*.
+1.In the left-sided menu, find the tool **peak-motifs**.
 
-3. For the **Peak sequences** option set, paste the URL of the fasta sequence file obtained in the previous section (alternatively, you can upload the fasta file from your local copy but this will take more time-. 
+2. For the **Peak sequences** option set, paste the URL of the fasta sequence file obtained in the previous section (alternatively, you can upload the fasta file from your local copy but this will take more time-. 
+
+3. Type an appropriate **tittle** for the analysis, for example: *A. Thaliana MYB3R3 vs GFP - GSM1482283*.
+
 
 4. Explore the other options! We will discuss them during the training session. 
 

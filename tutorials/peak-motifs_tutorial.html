@@ -257,22 +257,33 @@ div.tocify {
 <li><p>In the left-sided menu, find the tool named <strong><em>sequences from bed/gff/vcf</em></strong> (you can either click on <strong>view all tools</strong>, or use the search box at the top of the tool pane.</p></li>
 <li><p>Start typing the name of the organism of interest, in this case <em>Arabidopsis</em>. While you do this, the Web form will provide the possible completions for the organism name. Select <em>Arabidopsis thaliana.TAIR10.37</em>.</p></li>
 <li><p>To specify the <strong>genomic coordinates</strong> you can either <strong>upload</strong> a file from your computer (e.g. the file that you downloaded in the previous section), or directly paste the link (e.g. ftp site above) in the <strong>URL</strong> textbox.</p></li>
-<li><p>Set the <strong>Output</strong> opton to <em>server</em>.</p>
+<li><p>Set the <strong>Output</strong> option to <em>server</em>.</p>
 <p><em>Optionally</em>, you can select email output in order to be notified of the query submission and completion (you shoud thus receive 2 separate emails for aach query).</p></li>
-<li><p>After a few seconds, the server displays a table with links to the input and output files. This includes contains the fasta-formatted sequences of the peaks.</p>
-<p><em>Optionally</em>, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p></li>
 </ol>
 <div class="figure">
 <img src="figures/Figure2_retrieve-seq-bed_form.png" title="Figure2" alt="Figure2: Screenshot of the sequences from bed/gff/vcf form. Note that the second DEMO will authomatically fill in the data of this tutorial" />
 <p class="caption">Figure2: Screenshot of the <em>sequences from bed/gff/vcf</em> form. Note that the second <strong>DEMO</strong> will authomatically fill in the data of this tutorial</p>
 </div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Click <strong>GO</strong>. After a few seconds, the server displays a table with links to the input and output files. This includes contains the fasta-formatted sequences of the peaks.</p>
+<p><em>Optionally</em>, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p></li>
+</ol>
+<div class="figure">
+<img src="figures/Figure2b_retrieve-seq-bed_result.png" title="Figure2b" alt="Figure2: Result page of sequences from bed/gff/vcf." />
+<p class="caption">Figure2: Result page of <em>sequences from bed/gff/vcf</em>.</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>At the bottom of the result form, the <strong>Next step</strong> box enables you to automatically submit the result (fasta sequences of your peaks) to a diversity of RSAT tools. Click on the <strong>peak-motifs</strong> button. This will open a new form where the URL of the fasta sequences has been automatically pasted.</p>
+<p><strong>Note:</strong> alternatively, a <strong>peak-motifs</strong>form can also be obtained by clicking on the tool name in the left-sided pannel. The difference is that this will open a fresh form, without transferring the content of the current query. You will thus have to fill up the sequence option manually.</p></li>
+</ol>
 </div>
 <div id="discovering-over-represented-motifs-in-the-set-of-peak-sequences" class="section level3">
 <h3>Discovering over-represented motifs in the set of peak sequences</h3>
-<p>1.In any <a href="http://plants.rsat.eu/">RSAT server</a> server, find the tool <em>peak-motifs</em>.</p>
+<p>If you ran the last step of the previous section, you should already have a <strong>peak-motif</strong> form pre-filled with the URL of your fasta sequences. If this is the case, you can skip the two first steps, which are useful if you dispose of your own fasta file to analyse.</p>
+<p>1.In the left-sided menu, find the tool <strong>peak-motifs</strong>.</p>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Type an appropriate <strong>tittle</strong> for the analysis, for example: <em>A. Thaliana MYB3R3 vs GFP - GSM1482283</em>.</p></li>
 <li><p>For the <strong>Peak sequences</strong> option set, paste the URL of the fasta sequence file obtained in the previous section (alternatively, you can upload the fasta file from your local copy but this will take more time-.</p></li>
+<li><p>Type an appropriate <strong>tittle</strong> for the analysis, for example: <em>A. Thaliana MYB3R3 vs GFP - GSM1482283</em>.</p></li>
 <li><p>Explore the other options! We will discuss them during the training session.</p></li>
 <li><p>Specify a transcription factor database that will be used to associate the discovered motifs putative bound factors. For this dataset we will select <strong>footprintDB-plants</strong>. Note that the tool also allows you to upload a custom motif collection in Transfac format.</p></li>
 </ol>
