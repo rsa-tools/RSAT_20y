@@ -1,6 +1,6 @@
 ---
-title: "RSAT 20 years workshop: training session"
-subtitle: "Motif analysis in Plant ChIP-seq peaks"
+title: "Tutorial: motif analysis in Plant ChIP-seq peaks"
+subtitle: "RSAT 20 years workshop: training session"
 author: "Alejandra Medina-Rivera, Morgane Thomas-Chollier and Jacques van Helden"
 date: '`r Sys.Date()`'
 output:
@@ -73,15 +73,8 @@ knitr::opts_chunk$set(
 
 ```
 
-## Introduction
 
-In 2018, the Regulatory Sequence Analysis Tools (RSAT) software suite celebrates its $20^{th}$ birthday by organising a 1-day workshop in Paris (May 17-18, 2018). 
-
-This page contains a 3-hours tutorial to get familiar with RSAT based on a study case where we analyse motifs in plant ChIP-seq peaks. This tutorial is derived from a previously published protocol [@pmid27557775]. The concepts seen here apply to other organisms as well. 
-
-
-
-### High-troughput characterization of regulatory regions
+## High-troughput characterization of regulatory regions
 
 The ChIP-seq technology permits to determine experimentally all the DNA binding locations of a transcription factor, as well as diverse histone modifications related to epigenetic regulatioN. 
 
@@ -93,11 +86,11 @@ The pulled down sequences are then on aligned to the genome (*read-mapping*), an
 
 ### Regulatory Sequence Analysis Tools
 
-Since 1998, van Helden and collaborators developed a software suite combining specialised tools to analyse regulatory motifs in genomic sequences ([**RSAT**; http://www.rsat.eu/](http://www.rsat.eu/)). 
+Since 1998 [@pmid9719638], van Helden and collaborators developed the Regulatory Sequence Analysis Tools ([**RSAT**; http://rsat.eu/](http://rsat.eu/)), a software suite combining specialised tools to analyse regulatory motifs in genomic sequences  [@pmid10641039, @pmid18495751, @pmid21715389, @pmid25904632, @pmid29722874]. 
 
 Although initial project started with the first fully sequenced eukaryote, the bdding yease *Saccharomyces cerevisiae*, it soon incorporated other organisms, attempting to cope with the ever-increasing number of sequenced genomes. 
 
-In 2015, the Web access was distributed over 6 dedicated servers in order to enable a better management of genomic data, and to rationalise the presentation of some taxon-specific tools.  
+In 2015, the Web access was distributed over 6 dedicated servers in order to enable a better management of genomic data, and to rationalise the presentation of some taxon-specific tools [@pmid25904632].  
 
 For the current tutorial we will be using, preferentially, the [**RSAT::Plants** server (http://plants.rsat.eu/)](http://plants.rsat.eu/), where the *Arabidopsis thaliana* genome is installed (we will use assembly TAIR10.37).
 
@@ -113,7 +106,7 @@ For the current tutorial we will be using, preferentially, the [**RSAT::Plants**
 
 ### Study case
 
-*MYB3R3 ChIP-Seq peaks were downloaded from GEO NCBI [ftp site](ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1482nnn/GSM1482283/suppl/GSM1482283_MYB3R3-GFP_ChIP_peaks.bed.txt.gz)
+*MYB3R3 ChIP-Seq peaks (sample ID GSM1482283) can be downloaded from GEO NCBI [ftp site](ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1482nnn/GSM1482283/suppl/GSM1482283_MYB3R3-GFP_ChIP_peaks.bed.txt.gz)
 
 ## Tutorial
 

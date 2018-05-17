@@ -13,7 +13,7 @@
 
 <meta name="date" content="2018-05-17" />
 
-<title>RSAT 20 years workshop: training session</title>
+<title>Tutorial: motif analysis in Plant ChIP-seq peaks</title>
 
 <script src="peak-motifs_tutorial_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -200,20 +200,16 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">RSAT 20 years workshop: training session</h1>
-<h3 class="subtitle"><em>Motif analysis in Plant ChIP-seq peaks</em></h3>
+<h1 class="title toc-ignore">Tutorial: motif analysis in Plant ChIP-seq peaks</h1>
+<h3 class="subtitle"><em>RSAT 20 years workshop: training session</em></h3>
 <h4 class="author"><em>Alejandra Medina-Rivera, Morgane Thomas-Chollier and Jacques van Helden</em></h4>
 <h4 class="date"><em>2018-05-17</em></h4>
 
 </div>
 
 
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
-<p>In 2018, the Regulatory Sequence Analysis Tools (RSAT) software suite celebrates its <span class="math inline">\(20^{th}\)</span> birthday by organising a 1-day workshop in Paris (May 17-18, 2018).</p>
-<p>This page contains a 3-hours tutorial to get familiar with RSAT based on a study case where we analyse motifs in plant ChIP-seq peaks. This tutorial is derived from a previously published protocol <span class="citation">(Castro-Mondragon et al. <a href="#ref-pmid27557775">2016</a>)</span>. The concepts seen here apply to other organisms as well.</p>
-<div id="high-troughput-characterization-of-regulatory-regions" class="section level3">
-<h3>High-troughput characterization of regulatory regions</h3>
+<div id="high-troughput-characterization-of-regulatory-regions" class="section level2">
+<h2>High-troughput characterization of regulatory regions</h2>
 <p>The ChIP-seq technology permits to determine experimentally all the DNA binding locations of a transcription factor, as well as diverse histone modifications related to epigenetic regulatioN.</p>
 <p>ChIP-seq consists in the immunoprecipitation of a protein bound to the DNA (Histone with a specific modification or a transcription factor), followed by the sequencing of the immunoprecipitated DNA fragments.</p>
 <p>The pulled down sequences are then on aligned to the genome (<em>read-mapping</em>), and the regions in reads (<em>peaks</em>) are detected with a <em>peak-calling</em> software tool. In brief, peaks are considered as regions where the protein of interest is likelt to be bound, given the local enrichment of aligned reads in ChIP-ped samples compared to a given control (so-called “<em>input</em>”).</p>
@@ -221,12 +217,11 @@ div.tocify {
 <img src="figures/Figure1_mapped_reads.png" title="Figure1" alt="Figure1: From Castro-Mondragon, et al 2016, genome browser screen shot of a 9 kb region in chromosome 1 of the Arabidopsis thaliana genome. The top tracks show the read coverage profile from a ChIP-seq experiment for MYB3R3 transcription factor (brown) and its control (gray). The bottom panel shows peaks obtained using different bioinformatics tools (peak-callers) with variable parammeters (see (???) for details)." />
 <p class="caption">Figure1: From Castro-Mondragon, et al 2016, genome browser screen shot of a 9 kb region in chromosome 1 of the <em>Arabidopsis thaliana</em> genome. The top tracks show the read coverage profile from a ChIP-seq experiment for MYB3R3 transcription factor (brown) and its control (gray). The bottom panel shows peaks obtained using different bioinformatics tools (peak-callers) with variable parammeters (see <span class="citation">(<span class="citeproc-not-found" data-reference-id="pmidpmid27557775"><strong>???</strong></span>)</span> for details).</p>
 </div>
-</div>
 <div id="regulatory-sequence-analysis-tools" class="section level3">
 <h3>Regulatory Sequence Analysis Tools</h3>
-<p>Since 1998, van Helden and collaborators developed a software suite combining specialised tools to analyse regulatory motifs in genomic sequences (<a href="http://www.rsat.eu/"><strong>RSAT</strong>; http://www.rsat.eu/</a>).</p>
+<p>Since 1998 <span class="citation">(Helden, Andre, and Collado-Vides <a href="#ref-pmid9719638">1998</a>)</span>, van Helden and collaborators developed the Regulatory Sequence Analysis Tools (<a href="http://rsat.eu/"><strong>RSAT</strong>; http://rsat.eu/</a>), a software suite combining specialised tools to analyse regulatory motifs in genomic sequences <span class="citation">(Helden, Andre, and Collado-Vides <a href="#ref-pmid10641039">2000</a>, <span class="citation">Thomas-Chollier et al. (<a href="#ref-pmid18495751">2008</a>)</span>, <span class="citation">Thomas-Chollier et al. (<a href="#ref-pmid21715389">2011</a>)</span>, <span class="citation">Medina-Rivera et al. (<a href="#ref-pmid25904632">2015</a>)</span>, <span class="citation">Nguyen et al. (<a href="#ref-pmid29722874">2018</a>)</span>)</span>.</p>
 <p>Although initial project started with the first fully sequenced eukaryote, the bdding yease <em>Saccharomyces cerevisiae</em>, it soon incorporated other organisms, attempting to cope with the ever-increasing number of sequenced genomes.</p>
-<p>In 2015, the Web access was distributed over 6 dedicated servers in order to enable a better management of genomic data, and to rationalise the presentation of some taxon-specific tools.</p>
+<p>In 2015, the Web access was distributed over 6 dedicated servers in order to enable a better management of genomic data, and to rationalise the presentation of some taxon-specific tools <span class="citation">(Medina-Rivera et al. <a href="#ref-pmid25904632">2015</a>)</span>.</p>
 <p>For the current tutorial we will be using, preferentially, the <a href="http://plants.rsat.eu/"><strong>RSAT::Plants</strong> server (http://plants.rsat.eu/)</a>, where the <em>Arabidopsis thaliana</em> genome is installed (we will use assembly TAIR10.37).</p>
 </div>
 </div>
@@ -242,7 +237,7 @@ div.tocify {
 </div>
 <div id="study-case" class="section level3">
 <h3>Study case</h3>
-<p>*MYB3R3 ChIP-Seq peaks were downloaded from GEO NCBI <a href="ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1482nnn/GSM1482283/suppl/GSM1482283_MYB3R3-GFP_ChIP_peaks.bed.txt.gz">ftp site</a></p>
+<p>*MYB3R3 ChIP-Seq peaks (sample ID GSM1482283) can be downloaded from GEO NCBI <a href="ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1482nnn/GSM1482283/suppl/GSM1482283_MYB3R3-GFP_ChIP_peaks.bed.txt.gz">ftp site</a></p>
 </div>
 </div>
 <div id="tutorial" class="section level2">
@@ -324,8 +319,23 @@ div.tocify {
 <li>Castro-Mondragon, J.A. et al. (2016). Methods Mol Biol., 1482, 297–322</li>
 </ol>
 <div id="refs" class="references">
-<div id="ref-pmid27557775">
-<p>Castro-Mondragon, J. A., C. Rioualen, B. Contreras-Moreira, and J. van Helden. 2016. “RSAT::Plants: Motif Discovery in ChIP-Seq Peaks of Plant Genomes.” <em>Methods Mol. Biol.</em> 1482: 297–322.</p>
+<div id="ref-pmid9719638">
+<p>Helden, J. van, B. Andre, and J. Collado-Vides. 1998. “Extracting regulatory sites from the upstream region of yeast genes by computational analysis of oligonucleotide frequencies.” <em>J. Mol. Biol.</em> 281 (5): 827–42.</p>
+</div>
+<div id="ref-pmid10641039">
+<p>———. 2000. “A web site for the computational analysis of yeast regulatory sequences.” <em>Yeast</em> 16 (2): 177–87.</p>
+</div>
+<div id="ref-pmid25904632">
+<p>Medina-Rivera, A., M. Defrance, O. Sand, C. Herrmann, J. A. Castro-Mondragon, J. Delerce, S. Jaeger, et al. 2015. “RSAT 2015: Regulatory Sequence Analysis Tools.” <em>Nucleic Acids Res.</em> 43 (W1): W50–56.</p>
+</div>
+<div id="ref-pmid29722874">
+<p>Nguyen, N. T. T., B. Contreras-Moreira, J. A. Castro-Mondragon, W. Santana-Garcia, R. Ossio, C. D. Robles-Espinoza, M. Bahin, et al. 2018. “RSAT 2018: regulatory sequence analysis tools 20th anniversary.” <em>Nucleic Acids Res.</em>, May.</p>
+</div>
+<div id="ref-pmid21715389">
+<p>Thomas-Chollier, M., M. Defrance, A. Medina-Rivera, O. Sand, C. Herrmann, D. Thieffry, and J. van Helden. 2011. “RSAT 2011: regulatory sequence analysis tools.” <em>Nucleic Acids Res.</em> 39 (Web Server issue): 86–91.</p>
+</div>
+<div id="ref-pmid18495751">
+<p>Thomas-Chollier, M., O. Sand, J. V. Turatsinze, R. Janky, M. Defrance, E. Vervisch, S. Brohee, and J. van Helden. 2008. “RSAT: regulatory sequence analysis tools.” <em>Nucleic Acids Res.</em> 36 (Web Server issue): W119–127.</p>
 </div>
 </div>
 </div>
