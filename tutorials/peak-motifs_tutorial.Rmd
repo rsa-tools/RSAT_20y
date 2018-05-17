@@ -175,7 +175,7 @@ If you ran the last step of the previous section, you should already have a **pe
 ![Choice of a motif database in **peak-motifs** form.](figures/peak-motifs_database_choice.png)
 
 
-6.Under **Locate motifs and export predicted sites as custom UCSC tracks**, in **Visualiza peaks ans sites in genome browser**, select peak coordiantes specified in fasta headers in *bedtools getfasta* format, asumming we used the *sequences from bed/gff/vcf* to retrieve the sequences.
+6. Under **Locate motifs and export predicted sites as custom UCSC tracks**, in **Visualiza peaks ans sites in genome browser**, select peak coordiantes specified in fasta headers in *bedtools getfasta* format, asumming we used the *sequences from bed/gff/vcf* to retrieve the sequences.
 
 ![Figure3: Screenshot of the  *peak-motifs* form. The user has to input the required data and information.](figures/Figure3.png "Figure3")
 
@@ -205,7 +205,8 @@ We will now use the tool *matrix-clustering* [@pmid28591841], which enables to r
 
 2. On the title box give a title to the analysis.
 
-3. Input the motif file containing the resuleting motifs from *peak-motifs*.
+3. Click the "Browse" button to select on your computer the file containing the root motifs obtained from *peak-motifs* in the previous section.
+
 ![Figure4.2: Screenshot of the  *matrix-clustering* form. The user has to fill the mandatory sections.](figures/Figure4.2.png "Figure4.2")
 
 4. Options can be tuned to trim the tree comparing the motifs with different thresholds. For the current protocol we recomened using **w**=5 and **Ncor**=0.55.

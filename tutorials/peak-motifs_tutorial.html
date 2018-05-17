@@ -313,7 +313,9 @@ div.tocify {
 <img src="figures/peak-motifs_database_choice.png" alt="Choice of a motif database in peak-motifs form." />
 <p class="caption">Choice of a motif database in <strong>peak-motifs</strong> form.</p>
 </div>
-<p>6.Under <strong>Locate motifs and export predicted sites as custom UCSC tracks</strong>, in <strong>Visualiza peaks ans sites in genome browser</strong>, select peak coordiantes specified in fasta headers in <em>bedtools getfasta</em> format, asumming we used the <em>sequences from bed/gff/vcf</em> to retrieve the sequences.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Under <strong>Locate motifs and export predicted sites as custom UCSC tracks</strong>, in <strong>Visualiza peaks ans sites in genome browser</strong>, select peak coordiantes specified in fasta headers in <em>bedtools getfasta</em> format, asumming we used the <em>sequences from bed/gff/vcf</em> to retrieve the sequences.</li>
+</ol>
 <div class="figure">
 <img src="figures/Figure3.png" title="Figure3" alt="Figure3: Screenshot of the peak-motifs form. The user has to input the required data and information." />
 <p class="caption">Figure3: Screenshot of the <em>peak-motifs</em> form. The user has to input the required data and information.</p>
@@ -336,7 +338,13 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li><p>Open the tool <em>matrix-clustering</em> in the <a href="http://plants.rsat.eu">RSAT:Plant</a> server. <img src="figures/Figure4.1.png" title="Figure4.1" alt="Figure4.1: Screenshot of the matrix-clustering form. The user has to fill the mandatory sections." /></p></li>
 <li><p>On the title box give a title to the analysis.</p></li>
-<li><p>Input the motif file containing the resuleting motifs from <em>peak-motifs</em>. <img src="figures/Figure4.2.png" title="Figure4.2" alt="Figure4.2: Screenshot of the matrix-clustering form. The user has to fill the mandatory sections." /></p></li>
+<li><p>Click the “Browse” button to select on your computer the file containing the root motifs obtained from <em>peak-motifs</em> in the previous section.</p></li>
+</ol>
+<div class="figure">
+<img src="figures/Figure4.2.png" title="Figure4.2" alt="Figure4.2: Screenshot of the matrix-clustering form. The user has to fill the mandatory sections." />
+<p class="caption">Figure4.2: Screenshot of the <em>matrix-clustering</em> form. The user has to fill the mandatory sections.</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
 <li><p>Options can be tuned to trim the tree comparing the motifs with different thresholds. For the current protocol we recomened using <strong>w</strong>=5 and <strong>Ncor</strong>=0.55.</p></li>
 <li><p>In advanced options, select <em>Ncor</em> (Normalized Pearson Correlation) and <em>average</em> <img src="figures/Figure4.3.png" title="Figure4.3" alt="Figure4.3: Screenshot of the matrix-clustering form. The user has to fill the mandatory sections." /></p></li>
 <li><p>Select one output option. Since the program could take some time depending on the size of the collection we recomend using <strong>email</strong>.</p></li>
