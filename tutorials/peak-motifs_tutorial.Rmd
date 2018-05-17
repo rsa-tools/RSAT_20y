@@ -162,7 +162,7 @@ If you ran the last step of the previous section, you should already have a **pe
 
 2. For the **Peak sequences** option set, paste the URL of the fasta sequence file obtained in the previous section (alternatively, you can upload the fasta file from your local copy but this will take more time. 
 
-3. Type an appropriate **tittle** for the analysis, for example: *A. Thaliana MYB3R3 vs GFP - GSM1482283*.
+3. Type an appropriate **Title** for the analysis, for example: *A. Thaliana MYB3R3 vs GFP - GSM1482283*.
 
 
 4. Explore the other options! We will discuss them during the training session. 
