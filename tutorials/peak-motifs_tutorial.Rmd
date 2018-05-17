@@ -94,15 +94,15 @@ In 2015, the Web access was distributed over 6 dedicated servers in order to ena
 
 For the current tutorial we will be using, preferentially, the [**RSAT::Plants** server (http://plants.rsat.eu/)](http://plants.rsat.eu/), where the *Arabidopsis thaliana* genome is installed (we will use assembly TAIR10.37).
 
-## Materials
+## Material
 
-### Tools
+### RSAT tools used in this tutorial
 
-1. *sequences from bedbed/gff/vcf*: Retrieves sequences from a genome given a set of coordinates 
+1. ***sequences from bedbed/gff/vcf***: Retrieves sequences from a genome given a set of coordinates 
 
-2. *peak-motifs*: discover exceptional motifs from a set of peak sequences, based on a combination of motif discovery algorithms relying on different criteria (enrichment, positional bias, local enrichment). 
+2. ***peak-motifs***: discover exceptional motifs from a set of peak sequences, based on a combination of motif discovery algorithms relying on different criteria (enrichment, positional bias, local enrichment). 
 
-3.  *matrix-clustering*: identify similarities across a collection of motifs.
+3.  ***matrix-clustering***: identify similarities across a collection of motifs.
 
 ### Study case
 
@@ -121,19 +121,24 @@ For the current tutorial we will be using, preferentially, the [**RSAT::Plants**
 
 ### Retrieving ChIP-seq peaks sequences from the TAIR10.37 genome
 
-1. Open in a separate window a connection to the the [RSAT::Plants server](http://plants.rsat.eu/) server. 
+1. In a separate window, open a connection to the the [RSAT::Plants server](http://plants.rsat.eu/) server. 
 
-2. In the left-sided menu, find the tool named *sequences from bed/gff/vcf* (you can either click on **view all tools**, or use the search box at the top of the tool pane.
+2. In the left-sided menu, find the tool named ***sequences from bed/gff/vcf*** (you can either click on **view all tools**, or use the search box at the top of the tool pane.
 
 2. Start typing the name of the organism of interest, in this case *Arabidopsis*. While you do this, the Web form will provide the possible completions for the organism name. Select *Arabidopsis thaliana.TAIR10.37*. 
 
 3. To specify the **genomic coordinates** you can either **upload** a file from your computer (e.g. the file that you downloaded in the previous section), or directly paste the link (e.g. ftp site above) in the **URL** textbox. 
 
-4. Optionally, you can select email output in order to be notified of the query submission and completion (you shoud thus receive 2 separate emails for aach query). 
+4. Set the **Output** opton to *server*. 
 
-5. After a few seconds, the server displays a link to the output file, which contains the fasta-formatted sequences of the peaks.  You can either download the fasta sequences to your computer, or save the URL, that will be used for following steps^[The second option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis].
+    *Optionally*, you can select email output in order to be notified of the query submission and completion (you shoud thus receive 2 separate emails for aach query). 
 
-![Figure2: Screenshot of the  *sequences from bed/gff/vcf* form. Note that the second **DEMO** will authomatically fill in the data of this tutorial](figures/Figure2.png "Figure2")
+
+5. After a few seconds, the server displays a table with links to the input and output files. This includes contains the fasta-formatted sequences of the peaks.  
+
+    *Optionally*, you can download the fasta sequences to your computer, to keep a trace of the results. You can also save the URL, that can be used for following steps^[The second option is particularly interesting if you have a slow internet connection, since this avoids to download the sequences and upload them for further analysis].
+
+![Figure2: Screenshot of the  *sequences from bed/gff/vcf* form. Note that the second **DEMO** will authomatically fill in the data of this tutorial](figures/Figure2_retrieve-seq-bed_form.png "Figure2")
 
 
 ### Discovering over-represented motifs in the set of peak sequences
