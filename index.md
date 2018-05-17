@@ -17,6 +17,7 @@ The training session will include be customized based on a discussion with parti
 1. Morgane Thomas-Chollier
 2. Alejandra Medina-Rivera
 3. Jacques van Helden
+4. Bruno Contreras-Moreira
 
 ## Resources
 

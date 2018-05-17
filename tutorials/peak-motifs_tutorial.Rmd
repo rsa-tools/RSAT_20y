@@ -74,6 +74,13 @@ knitr::opts_chunk$set(
 ```
 
 
+## Resources
+
+| Resource | Description + URL |
+|----------|----------------------------------------|
+| RSAT | Regulatory Sequence Analysis Tools portal: <http://rsat.eu/> |
+| Plant RSAT | RSAT for plant genomes <http://plants.rsat.eu/> |
+
 ## High-troughput characterization of regulatory regions
 
 The ChIP-seq technology permits to determine experimentally all the DNA binding locations of a transcription factor, as well as diverse histone modifications related to epigenetic regulatioN. 
