@@ -151,16 +151,22 @@ For the current tutorial we will be using, preferentially, the [**RSAT::Plants**
 
 If you ran the last step of the previous section, you should already have a **peak-motif** form pre-filled with the URL of your fasta sequences. If this is the case, you can skip the two first steps, which are useful if you dispose of your own fasta file to analyse. 
 
-1.In the left-sided menu, find the tool **peak-motifs**.
+1. In the left-sided menu, find the tool **peak-motifs**.
 
-2. For the **Peak sequences** option set, paste the URL of the fasta sequence file obtained in the previous section (alternatively, you can upload the fasta file from your local copy but this will take more time-. 
+2. For the **Peak sequences** option set, paste the URL of the fasta sequence file obtained in the previous section (alternatively, you can upload the fasta file from your local copy but this will take more time. 
 
 3. Type an appropriate **tittle** for the analysis, for example: *A. Thaliana MYB3R3 vs GFP - GSM1482283*.
 
 
 4. Explore the other options! We will discuss them during the training session. 
 
-5. Specify a transcription factor database that will be used to associate the discovered motifs putative bound factors. For this dataset we will select **footprintDB-plants**. Note that the tool also allows you to upload a custom motif collection in Transfac format.
+5. Specify a transcription factor database that will be used to associate the discovered motifs putative bound factors. For this dataset we will select **footprintDB-plants**. 
+
+    Note that the tool also allows you to upload a custom motif collection in Transfac format.
+
+
+![Choice of a motif database in **peak-motifs** form.](figures/peak-motifs_database_choice.png)
+
 
 6.Under **Locate motifs and export predicted sites as custom UCSC tracks**, in **Visualiza peaks ans sites in genome browser**, select peak coordiantes specified in fasta headers in *bedtools getfasta* format, asumming we used the *sequences from bed/gff/vcf* to retrieve the sequences.
 
